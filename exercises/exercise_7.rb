@@ -10,3 +10,11 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+
+puts "Which store?"
+answer = gets.chomp
+query = Store.where name: answer
+puts query
+
+new_store = Store.create name: answer, mens_apparel: true, annual_revenue: 10
+# puts new_store.errors.messages
